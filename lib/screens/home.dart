@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:insta_profile_25/screens/bubble_stories.dart';
 import 'package:insta_profile_25/util/user_posts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class UserHome extends StatelessWidget {
   final List people = [
@@ -13,20 +14,22 @@ class UserHome extends StatelessWidget {
     'Divyanshi',
     'Aryan'
   ];
+
+  UserHome({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
-            title: const Row(
+            title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   'Instagram',
-                  style: TextStyle(color: Colors.black),
+                  style: GoogleFonts.lato(),
                 ),
-                Row(
+                const Row(
                   children: [
                     Padding(
                       padding: EdgeInsets.all(24.0),
@@ -38,7 +41,7 @@ class UserHome extends StatelessWidget {
               ],
             )),
         body: Column(children: [
-          Container(
+          SizedBox(
             height: 130,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,

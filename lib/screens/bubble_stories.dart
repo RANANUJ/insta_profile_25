@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class BubbleStories extends StatelessWidget {
   final String text;
-  BubbleStories({required this.text});
+  const BubbleStories({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class BubbleStories extends StatelessWidget {
                 color: Colors.grey[400],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Text(text),

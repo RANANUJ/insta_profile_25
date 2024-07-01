@@ -6,7 +6,7 @@ import 'package:insta_profile_25/screens/reels.dart';
 import 'package:insta_profile_25/screens/search.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -23,10 +23,10 @@ class _HomePageState extends State<HomePage> {
   //different pages to navigate to
   final List<Widget> _children = [
     UserHome(),
-    UserSearch(),
-    UserCreate(),
-    UserReels(),
-    UserAccount(),
+    const UserSearch(),
+    const UserCreate(),
+    const UserReels(),
+    const UserAccount(),
   ];
   @override
   Widget build(BuildContext context) {

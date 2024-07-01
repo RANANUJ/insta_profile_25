@@ -6,6 +6,8 @@ import 'package:insta_profile_25/util/account_tab3.dart';
 import 'package:insta_profile_25/util/account_tab4.dart';
 
 class UserAccount extends StatelessWidget {
+  const UserAccount({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -14,7 +16,7 @@ class UserAccount extends StatelessWidget {
           body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 20.0, top: 20),
+            padding: const EdgeInsets.only(left: 0.0, top: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -26,7 +28,7 @@ class UserAccount extends StatelessWidget {
                     shape: BoxShape.circle,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -60,8 +62,8 @@ class UserAccount extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(2.0),
+          const Padding(
+            padding: EdgeInsets.all(2.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -70,7 +72,7 @@ class UserAccount extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 2.0),
+                  padding: EdgeInsets.symmetric(vertical: 2.0),
                   child: Text('I am a Mobile Developer'),
                 ),
                 Text(
@@ -88,12 +90,12 @@ class UserAccount extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(2.0),
                     child: Container(
-                      padding: EdgeInsets.all(5),
-                      child: Text('Following'),
+                      padding: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey),
                         borderRadius: BorderRadius.circular(5),
                       ),
+                      child: const Text('Following'),
                     ),
                   ),
                 ),
@@ -101,12 +103,12 @@ class UserAccount extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(2.0),
                     child: Container(
-                      padding: EdgeInsets.all(5),
-                      child: Text('Message'),
+                      padding: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey),
                         borderRadius: BorderRadius.circular(5),
                       ),
+                      child: const Text('Message'),
                     ),
                   ),
                 ),
@@ -114,32 +116,30 @@ class UserAccount extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(2.0),
                     child: Container(
-                      padding: EdgeInsets.all(5),
-                      child: Text('Subscribe'),
+                      padding: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey),
                         borderRadius: BorderRadius.circular(5),
                       ),
+                      child: const Text('Subscribe'),
                     ),
                   ),
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
               children: [
-                BubbleStories(
-                  text: 'Story 1',
-                ),
+                BubbleStories(text: 'Story 1'),
                 BubbleStories(text: 'story 2'),
                 BubbleStories(text: 'story 3'),
                 BubbleStories(text: 'story 4'),
               ],
             ),
           ),
-          TabBar(tabs: [
+          const TabBar(tabs: [
             Tab(
               icon: Icon(Icons.grid_3x3_outlined),
             ),

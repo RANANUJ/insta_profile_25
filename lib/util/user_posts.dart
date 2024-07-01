@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class UserPosts extends StatelessWidget {
   final String name;
-  UserPosts({required this.name});
+  const UserPosts({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -24,31 +24,31 @@ class UserPosts extends StatelessWidget {
                     shape: BoxShape.circle,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text(
                   name,
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-            Icon(Icons.menu),
+            const Icon(Icons.menu),
           ]),
         ),
         Container(
           height: 300,
           color: Colors.grey[300],
         ),
-        Padding(
-          padding: const EdgeInsets.all(16.0),
+        const Padding(
+          padding: EdgeInsets.all(16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(children: [
                 Icon(Icons.favorite_border),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                  padding: EdgeInsets.symmetric(horizontal: 12.0),
                   child: Icon(Icons.chat_bubble_outline),
                 ),
                 Icon(Icons.share),
@@ -57,8 +57,8 @@ class UserPosts extends StatelessWidget {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 16.0),
+        const Padding(
+          padding: EdgeInsets.only(left: 16.0),
           child: Row(
             children: [
               Text('Liked by'),
@@ -79,13 +79,15 @@ class UserPosts extends StatelessWidget {
         Padding(
             padding: const EdgeInsets.only(left: 16.0, top: 8),
             child: RichText(
-                text:
-                    TextSpan(style: TextStyle(color: Colors.black), children: [
-              TextSpan(
-                  text: 'Shimla',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              TextSpan(text: ' is a beautiful place to visit in the month of '),
-            ]))),
+                text: const TextSpan(
+                    style: TextStyle(color: Colors.black),
+                    children: [
+                  TextSpan(
+                      text: 'Shimla',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(
+                      text: ' is a beautiful place to visit in the month of '),
+                ]))),
         //posts
       ],
     );
